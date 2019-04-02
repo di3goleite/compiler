@@ -1,0 +1,22 @@
+{
+  "name": "compiler",
+  "version": "1.0.0",
+  "description": "[EXA869] MI - PROCESSADORES DE LINGUAGEM DE PROGRAMAÇÃO",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/di3goleite/compiler.git"
+  },
+  "keywords": [
+    "compiler"
+  ],
+  "author": "Diego Leite",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/di3goleite/compiler/issues"
+  },
+  "homepage": "https://github.com/di3goleite/compiler#readme"
+}

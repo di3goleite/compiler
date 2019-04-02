@@ -1,0 +1,18 @@
+/* This is
+   a block
+   comment
+*/
+metodo(hue) {
+  inteiro br = -      2.0;
+  real test=1 - 2;
+
+  escreva("hellooooooooooooo");
+  escreva("world!!!hue");
+
+  // This is a line comment
+  se (hue != 1 && br >= 3 || test == 1) {
+    resultado hue;
+  } senao {
+    resultado br;
+  }
+}
