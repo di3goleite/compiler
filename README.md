@@ -1,4 +1,4 @@
-# EXA869 - MI - Processadores de Linguagem de Programação
+# [EXA869] MI - Processadores de Linguagem de Programação
 
 Frontend de compilador feito em Node JS por **Diego Leite**.
 
