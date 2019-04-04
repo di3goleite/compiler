@@ -1,4 +1,6 @@
-# Feito em Node JS por **Diego Leite** para a disciplina EXA869 - MI - Processadores de Linguagem de Programação.
+# EXA869 - MI - Processadores de Linguagem de Programação
+
+Frontend de compilador feito em Node JS por **Diego Leite**.
 
 ## Instruções
 1. Faça o download da versão mais recente do [Node JS](https://nodejs.org/en/download/)
