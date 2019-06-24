@@ -35,7 +35,7 @@ function doLexicalAnalysis(file) {
         result = lexicalAnalyzer.bandaid(result);
         result = classifier.run(result);
 
-        const stream = fs.createWriteStream(file + '.lexical.out');
+        const stream = fs.createWriteStream(file + '.out');
         const mapping = require('./common/classificationMapping');
 
         let lineNumber = null;
