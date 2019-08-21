@@ -1,11 +1,27 @@
 programa {
   constantes {
     inteiro a = 1;
+    inteiro b = 12;
+    real c = 1.50, d = 1;
+    boleano e = verdadeiro, f = falso;
+    texto g = "casa", h = "palavra";
+    inteiro const1 = 25;
   }
 
   metodo principal ():vazio{
     variaveis {
+      inteiro a = 1;
       inteiro b = 12;
+      inteiro c = b;
+      inteiro d = 2 , e = 3;
+      inteiro f = 4, g;
+      real c = 1.50, d = 1;
+      boleano e = verdadeiro, f = falso;
+      texto g = "casa", h = "palavra";
+      inteiro test[1];
+      real mat[4][5];
+      inteiro vet[5] = {1, 2, 3, 4, 5};
+      inteiro var1;
     }
 
     se (b>a) entao {
@@ -40,5 +56,21 @@ programa {
     escreva ("test!!!");
     escreva (var1);
     escreva (vet1[0]);
+  }
+
+  metodo lerDados():vazio{
+    variaveis {
+      texto var1;
+      inteiro vet1[10];
+    }
+    leia (var1);
+    leia (vet1[0]);
+  }
+
+  metodo metXchamaMetY():vazio{
+    variaveis {
+      inteiro area;
+    }
+    area = calcularArea(2,4);
   }
 }
