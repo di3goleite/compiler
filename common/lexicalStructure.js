@@ -3,7 +3,7 @@ const categories = {
   ARITHMETIC_OPERATORS: ['\\+', '\\-', '\\*', '\\/', '\\+\\+', '\\-\\-'],
   RELATIONAL_OPERATORS: ['!=', '==', '<', '<=', '>', '>=', '='],
   LOGIC_OPERATORS: ['\\!', '\\&\\&', '\\|\\|'],
-  DELIMITERS: ['\;', '\,', '\\(', '\\)', '\\[', '\\]', '\\{', '\\}', '\\.']
+  DELIMITERS: ['\:', '\;', '\,', '\\(', '\\)', '\\[', '\\]', '\\{', '\\}', '\\.']
 };
 
 module.exports = { categories };

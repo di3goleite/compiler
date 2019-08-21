@@ -35,7 +35,7 @@ function doLexicalAnalysis(file) {
         result = lexicalAnalyzer.bandaid(result);
         result = classifier.run(result);
 
-        const stream = fs.createWriteStream(file + '.out');
+        const stream = fs.createWriteStream(file + '.lexical.out');
         const mapping = require('./common/classificationMapping');
 
         let lineNumber = null;
@@ -82,6 +82,25 @@ function doLexicalAnalysis(file) {
   });
 }
 
+function doSyntaxAnalysis(file, lexemes) {
+  return new Promise(function (resolve, reject) {
+    const errors = require('./lib/syntaxAnalyzer')(lexemes).receiveStart();
+
+    const stream = fs.createWriteStream(file + '.syntax.out');
+
+    if (errors.length > 0) {
+      errors.forEach(function (error) {
+        stream.write(`${error}\n`);
+      });
+    } else {
+      stream.write('Sucesso. Nenhum error de sintax foi encontrado!');
+    }
+
+    stream.end();
+    resolve();
+  });
+}
+
 async function run() {
   try {
     const TARGET_DIRECTORY = path.join(__dirname, 'teste');
@@ -92,11 +111,13 @@ async function run() {
     );
 
     let filename = '';
+    let lexemes = [];
 
     for (const file of files) {
       filename = path.join(TARGET_DIRECTORY, file);
       console.log(`File: ${filename}`);
-      await doLexicalAnalysis(filename);
+      lexemes = await doLexicalAnalysis(filename);
+      await doSyntaxAnalysis(filename, lexemes);
     }
   } catch(e) {
     console.log(e.message);

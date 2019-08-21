@@ -1,0 +1,15 @@
+programa {
+  constantes {
+    inteiro a = 1;
+  }
+
+  metodo principal ():vazio{
+    variaveis {
+      inteiro b = 12;
+    }
+
+    se (b>a) entao {
+      mostrarMensagem();
+    }
+  }
+}
