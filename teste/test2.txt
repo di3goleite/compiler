@@ -10,6 +10,17 @@ programa {
 
     se (b>a) entao {
       mostrarMensagem();
+    } senao {
+      lerDados();
+    }
+
+    enquanto (a!=b){
+      b=c+a;
+      d++;
+    }
+
+    se (a==b) entao {
+      mostrarMensagem();
     }
   }
 }
