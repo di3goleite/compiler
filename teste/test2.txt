@@ -23,4 +23,22 @@ programa {
       mostrarMensagem();
     }
   }
+
+  metodo calcularArea(inteiro x, inteiro y):inteiro{
+    variaveis {
+      inteiro area;
+    }
+    area = x * y;
+    resultado area;
+  }
+
+  metodo mostrarMensagem():vazio{
+    variaveis {
+      inteiro var1 = 2455;
+      inteiro vet1[0] = 1;
+    }
+    escreva ("test!!!");
+    escreva (var1);
+    escreva (vet1[0]);
+  }
 }
