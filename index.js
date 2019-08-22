@@ -84,7 +84,7 @@ function doLexicalAnalysis(file) {
 
 function doSyntaxAnalysis(file, lexemes) {
   return new Promise(function (resolve, reject) {
-    const errors = require('./lib/syntaxAnalyzer')(lexemes).receiveStart();
+    const errors = require('./lib/syntaxAnalyzer')(lexemes).Start();
 
     const stream = fs.createWriteStream(file + '.syntax.out');
 
