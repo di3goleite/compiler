@@ -1,6 +1,6 @@
 programa {
   constantes {
     inteiro a = 1;
-    inteiro b = 12;
+    real b = 12;
   }
 }
