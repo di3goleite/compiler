@@ -3,4 +3,12 @@ programa {
     inteiro a = 1;
     real b = 12;
   }
+
+  metodo principal ():vazio{
+    variaveis {
+      inteiro a = 1;
+      inteiro b = 12;
+      inteiro c = b;
+    }
+  }
 }
