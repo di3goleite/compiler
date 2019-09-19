@@ -12,11 +12,13 @@ programa {
     }
   }
 
-  metodo calcularArea(inteiro x, inteiro y):inteiro{
+  metodo calcularArea (inteiro x, inteiro y):inteiro{
     variaveis {
       inteiro area;
     }
+
     area = x * y;
+
     resultado area;
   }
 }
