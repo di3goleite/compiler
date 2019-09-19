@@ -11,4 +11,12 @@ programa {
       inteiro c = b;
     }
   }
+
+  metodo calcularArea(inteiro x, inteiro y):inteiro{
+    variaveis {
+      inteiro area;
+    }
+    area = x * y;
+    resultado area;
+  }
 }

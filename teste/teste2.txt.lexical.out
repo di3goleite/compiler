@@ -39,6 +39,34 @@
 11	DEL	;
 12	DEL	}
 13	DEL	}
-14	DEL	}
+15	PRE	metodo
+15	IDE	calcularArea
+15	DEL	(
+15	PRE	inteiro
+15	IDE	x
+15	DEL	,
+15	PRE	inteiro
+15	IDE	y
+15	DEL	)
+15	DEL	:
+15	PRE	inteiro
+15	DEL	{
+16	PRE	variaveis
+16	DEL	{
+17	PRE	inteiro
+17	IDE	area
+17	DEL	;
+18	DEL	}
+19	IDE	area
+19	REL	=
+19	IDE	x
+19	ART	*
+19	IDE	y
+19	DEL	;
+20	PRE	resultado
+20	IDE	area
+20	DEL	;
+21	DEL	}
+22	DEL	}
 
 Arquivo analisado com sucesso. Nenhum erro foi encontrado.
