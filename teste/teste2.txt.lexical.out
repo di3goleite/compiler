@@ -63,10 +63,10 @@
 20	ART	*
 20	IDE	y
 20	DEL	;
-22	PRE	resultado
-22	IDE	area
-22	DEL	;
+21	PRE	resultado
+21	IDE	area
+21	DEL	;
+22	DEL	}
 23	DEL	}
-24	DEL	}
 
 Arquivo analisado com sucesso. Nenhum erro foi encontrado.

@@ -16,6 +16,7 @@ programa {
     variaveis {
       inteiro area;
     }
+
     area = x * y;
     resultado area;
   }
