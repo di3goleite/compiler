@@ -1,15 +1,14 @@
 programa {
   constantes {
-    inteiro a = 1;
-    inteiro b = 2;
+    inteiro c;
   }
 
   metodo principal ():vazio{
     variaveis {
-      inteiro a = 3;
-      inteiro b = 4;
+      texto a = "huehue";
+      real b = 4.3;
     }
 
-    c = a + b;
+    c = a;
   }
 }

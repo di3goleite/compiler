@@ -45,6 +45,17 @@ function searchSymbol(scopeIndex, symbolId) {
   return false;
 }
 
+function deepSearchSymbol(symbolId) {
+  for (let i=0; i < symbolTable.length; i++) {
+    for (let j=0; j < symbolTable[i]['symbols'].length; j++) {
+      if (symbolTable[i]['symbols'][j]['id'] === symbolId) {
+        return symbolTable[i]['symbols'][j];
+      }
+    }
+  }
+  return null;
+}
+
 function insert(scope, classification, type, id, line) {
   const symbol = {
     class: classification,
@@ -98,4 +109,4 @@ function get() {
   return symbolTable;
 }
 
-module.exports = { insert, get, searchSymbol, searchScope };
+module.exports = { insert, get, searchSymbol, searchScope, deepSearchSymbol };
