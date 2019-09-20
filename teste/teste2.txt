@@ -1,23 +1,15 @@
 programa {
   constantes {
     inteiro a = 1;
-    real b = 12;
+    inteiro b = 2;
   }
 
   metodo principal ():vazio{
     variaveis {
-      inteiro a = 1;
-      inteiro b = 12;
-      inteiro c = b;
-    }
-  }
-
-  metodo calcularArea (inteiro x, inteiro y):inteiro{
-    variaveis {
-      inteiro area;
+      inteiro a = 3;
+      inteiro b = 4;
     }
 
-    area = x * y;
-    resultado area;
+    c = a + b;
   }
 }

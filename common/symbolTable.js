@@ -31,12 +31,14 @@ function searchScope(scope) {
   return -1;
 }
 
-function searchSymbol(scopeIndex, symbol) {
-  const scopeSymbols = symbolTable[scopeIndex]['symbols'];
+function searchSymbol(scopeIndex, symbolId) {
+  if (scopeIndex > - 1 && scopeIndex <= symbolTable.length - 1) {
+    const scopeSymbols = symbolTable[scopeIndex]['symbols'];
 
-  for (let i=0; i < scopeSymbols.length; i++) {
-    if (scopeSymbols[i]['id'] === symbol['id']) {
-      return true;
+    for (let i=0; i < scopeSymbols.length; i++) {
+      if (scopeSymbols[i]['id'] === symbolId) {
+        return true;
+      }
     }
   }
 
@@ -56,7 +58,7 @@ function insert(scope, classification, type, id, line) {
   if (index > -1) {
     // do only for global scope
     if (scope === 'programa') {
-      if (!searchSymbol(GLOBAL_SCOPE_INDEX, symbol)) {
+      if (!searchSymbol(GLOBAL_SCOPE_INDEX, symbol['id'])) {
         insertSymbolForExistingScope(GLOBAL_SCOPE_INDEX, symbol);
       } else {
         let error = `Linha: ${line}: O Símbolo ${symbol['id']}[${symbol['type']}] do escopo ${scope} já existe no escopo GLOBAL`;
@@ -65,9 +67,9 @@ function insert(scope, classification, type, id, line) {
     // do for global and local scope
     } else {
       // global scope
-      if (!searchSymbol(GLOBAL_SCOPE_INDEX, symbol)) {
+      if (!searchSymbol(GLOBAL_SCOPE_INDEX, symbol['id'])) {
         // local scope
-        if (!searchSymbol(index, symbol)) {
+        if (!searchSymbol(index, symbol['id'])) {
           insertSymbolForExistingScope(index, symbol);
         } else {
           let error = `Linha: ${line}: O Símbolo ${symbol['id']}[${symbol['type']}] do escopo ${scope} já existe no escopo ${scope}`;
@@ -82,7 +84,7 @@ function insert(scope, classification, type, id, line) {
     if (scope === 'programa') {
       createScopeAndInsertSymbol(scope, symbol);
     } else {
-      if (!searchSymbol(GLOBAL_SCOPE_INDEX, symbol)) {
+      if (!searchSymbol(GLOBAL_SCOPE_INDEX, symbol['id'])) {
         createScopeAndInsertSymbol(scope, symbol);
       } else {
         let error = `Linha: ${line}: O Símbolo ${symbol['id']}[${symbol['type']}] do escopo ${scope} já existe no escopo GLOBAL`;
@@ -96,4 +98,4 @@ function get() {
   return symbolTable;
 }
 
-module.exports = { insert, get };
+module.exports = { insert, get, searchSymbol, searchScope };
