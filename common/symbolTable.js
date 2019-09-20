@@ -13,7 +13,12 @@ const semanticAnalyzer = require('../lib/semanticAnalyzer');
  *   ]
  * }
  */
-const symbolTable = [];
+let symbolTable = [];
+
+function bootstrap() {
+  symbolTable = [];
+}
+
 function createScopeAndInsertSymbol(scope, symbol) {
   symbolTable.push({ scope: scope, symbols: [symbol] });
 }
@@ -109,4 +114,4 @@ function get() {
   return symbolTable;
 }
 
-module.exports = { insert, get, searchSymbol, searchScope, deepSearchSymbol };
+module.exports = { insert, get, bootstrap, searchSymbol, searchScope, deepSearchSymbol };

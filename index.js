@@ -85,18 +85,30 @@ function doLexicalAnalysis(file) {
 function doSyntaxAnalysis(file, lexemes) {
   return new Promise(function (resolve, reject) {
     const errors = require('./lib/syntaxAnalyzer')(lexemes).Start();
+    const syntaxErrors = errors['syntaxErrors'];
+    const semanticErrors = errors['semanticErrors'];
 
-    const stream = fs.createWriteStream(file + '.syntax.out');
+    const streamSyntax = fs.createWriteStream(file + '.syntax.out');
+    const streamSemantic = fs.createWriteStream(file + '.semantic.out');
 
-    if (errors.length > 0) {
-      errors.forEach(function (error) {
-        stream.write(`${error}\n`);
+    if (syntaxErrors.length > 0) {
+      syntaxErrors.forEach(function (error) {
+        streamSyntax.write(`${error}\n`);
       });
     } else {
-      stream.write('Sucesso. Nenhum error de sintax foi encontrado!');
+      streamSyntax.write('Sucesso. Nenhum error de sintax foi encontrado!');
     }
 
-    stream.end();
+    if (semanticErrors.length > 0) {
+      semanticErrors.forEach(function (error) {
+        streamSemantic.write(`${error}\n`);
+      });
+    } else {
+      streamSemantic.write('Sucesso. Nenhum error semântico foi encontrado!');
+    }
+
+    streamSyntax.end();
+    streamSemantic.end();
     resolve();
   });
 }
@@ -118,21 +130,10 @@ async function run() {
       console.log(`File: ${filename}`);
       lexemes = await doLexicalAnalysis(filename);
       await doSyntaxAnalysis(filename, lexemes);
-      beautifyPrint();
     }
   } catch(e) {
     console.log(e.message);
   }
-}
-
-const symbolTable = require('./common/symbolTable');
-const semanticAnalyzer = require('./lib/semanticAnalyzer');
-
-function beautifyPrint() {
-  console.log('symbolTable -----------------------------------------');
-  console.log(JSON.stringify(symbolTable.get(), null, 2));
-  console.log('errors -----------------------------------------');
-  console.log(semanticAnalyzer.get());
 }
 
 run(); // Application bootstrap

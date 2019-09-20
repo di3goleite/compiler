@@ -1,0 +1,14 @@
+Linha: 13: O Símbolo a[inteiro] do escopo principal já existe no escopo GLOBAL
+Linha: 14: O Símbolo b[inteiro] do escopo principal já existe no escopo GLOBAL
+Linha: 15: O Símbolo c[inteiro] do escopo principal já existe no escopo GLOBAL
+Linha: 16: O Símbolo d[inteiro] do escopo principal já existe no escopo GLOBAL
+Linha: 16: O Símbolo e[inteiro] do escopo principal já existe no escopo GLOBAL
+Linha: 17: O Símbolo f[inteiro] do escopo principal já existe no escopo GLOBAL
+Linha: 17: O Símbolo g[inteiro] do escopo principal já existe no escopo GLOBAL
+Linha: 18: O Símbolo c[real] do escopo principal já existe no escopo GLOBAL
+Linha: 18: O Símbolo d[real] do escopo principal já existe no escopo GLOBAL
+Linha: 19: O Símbolo e[boleano] do escopo principal já existe no escopo GLOBAL
+Linha: 19: O Símbolo f[boleano] do escopo principal já existe no escopo GLOBAL
+Linha: 20: O Símbolo g[texto] do escopo principal já existe no escopo GLOBAL
+Linha: 20: O Símbolo h[texto] do escopo principal já existe no escopo GLOBAL
+Linha: 34: Atribuição inválida. Tipo de símbolo de origem [c][real] diferente do de destino.

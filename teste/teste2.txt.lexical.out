@@ -2,7 +2,7 @@
 01	DEL	{
 02	PRE	constantes
 02	DEL	{
-03	PRE	inteiro
+03	PRE	texto
 03	IDE	c
 03	DEL	;
 04	DEL	}
@@ -28,9 +28,29 @@
 10	DEL	}
 12	IDE	c
 12	REL	=
-12	IDE	a
+12	NRO	5
 12	DEL	;
 13	DEL	}
-14	DEL	}
+15	PRE	metodo
+15	IDE	hue
+15	DEL	(
+15	DEL	)
+15	DEL	:
+15	PRE	vazio
+15	DEL	{
+16	PRE	variaveis
+16	DEL	{
+17	PRE	boleano
+17	IDE	noix
+17	REL	=
+17	IDE	fal
+17	PRE	se
+17	DEL	;
+18	DEL	}
+19	PRE	resultado
+19	PRE	falso
+19	DEL	;
+20	DEL	}
+21	DEL	}
 
 Arquivo analisado com sucesso. Nenhum erro foi encontrado.

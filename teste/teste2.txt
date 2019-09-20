@@ -1,6 +1,6 @@
 programa {
   constantes {
-    inteiro c;
+    texto c;
   }
 
   metodo principal ():vazio{
@@ -9,6 +9,13 @@ programa {
       real b = 4.3;
     }
 
-    c = a;
+    c = 5;
+  }
+
+  metodo hue():vazio {
+    variaveis {
+      boleano noix = false;
+    }
+    resultado falso;
   }
 }
