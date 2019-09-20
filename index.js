@@ -118,10 +118,21 @@ async function run() {
       console.log(`File: ${filename}`);
       lexemes = await doLexicalAnalysis(filename);
       await doSyntaxAnalysis(filename, lexemes);
+      beautifyPrint();
     }
   } catch(e) {
     console.log(e.message);
   }
+}
+
+const symbolTable = require('./common/symbolTable');
+const semanticAnalyzer = require('./lib/semanticAnalyzer');
+
+function beautifyPrint() {
+  console.log('symbolTable -----------------------------------------');
+  console.log(JSON.stringify(symbolTable.get(), null, 2));
+  console.log('errors -----------------------------------------');
+  console.log(semanticAnalyzer.get());
 }
 
 run(); // Application bootstrap
