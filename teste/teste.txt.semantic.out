@@ -11,4 +11,4 @@ Linha: 19: O Símbolo e[boleano] do escopo principal já existe no escopo GLOBAL
 Linha: 19: O Símbolo f[boleano] do escopo principal já existe no escopo GLOBAL
 Linha: 20: O Símbolo g[texto] do escopo principal já existe no escopo GLOBAL
 Linha: 20: O Símbolo h[texto] do escopo principal já existe no escopo GLOBAL
-Linha: 34: Atribuição inválida. Tipo de símbolo de origem [c][real] diferente do de destino.
+Linha: 34: Atribuição inválida. Tipo de símbolo de origem [c][real] diferente do de destino b[inteiro].
