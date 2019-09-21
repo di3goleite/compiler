@@ -4,6 +4,9 @@
 02	DEL	{
 03	PRE	texto
 03	IDE	c
+03	DEL	[
+03	NRO	123
+03	DEL	]
 03	DEL	;
 04	DEL	}
 06	PRE	metodo
@@ -27,6 +30,9 @@
 09	DEL	;
 10	DEL	}
 12	IDE	c
+12	DEL	[
+12	NRO	0
+12	DEL	]
 12	REL	=
 12	NRO	5
 12	DEL	;
@@ -43,8 +49,7 @@
 17	PRE	boleano
 17	IDE	noix
 17	REL	=
-17	IDE	fal
-17	PRE	se
+17	PRE	falso
 17	DEL	;
 18	DEL	}
 19	PRE	resultado
