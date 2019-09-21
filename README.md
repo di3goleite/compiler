@@ -11,7 +11,7 @@ Frontend de compilador feito em Node JS por **Diego Leite**.
 
 Tabela de Lexemas:
 
-| Sigla | Significado          |
+| Sigla | Significado           |
 |-------|----------------------|
 | PRE   | RESERVED_WORD        |
 | IDE   | IDENTIFIER           |
@@ -24,7 +24,7 @@ Tabela de Lexemas:
 
 Tabela de Erros:
 
-| Sigla | Significado          |
+| Sigla | Significado           |
 |-------|----------------------|
 | NUL   | UNDEFINED_LEXEME     |
 | NMF   | MALFORMED_NUMBER     |
